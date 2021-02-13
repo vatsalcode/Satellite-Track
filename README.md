@@ -2,8 +2,7 @@
 
 Track orbiting objects (such as the International Space Station) in your terminal!
 
-.. image:: https://raw.githubusercontent.com/trehn/termtrack/master/screenshot.png
-    :alt: Screenshot
+
 
 Requires Python 3.3+ and a terminal with 256 colors. A black background is highly recommended.
 
@@ -45,7 +44,7 @@ To draw the map, TermTrack will look at a shapefile from `Natural Earth <http://
 
 For Mars and the Moon there is no shapefile to read and the entire area is colored according to similar JPEG color maps.
 
-Night shading for each pixel is done by looking at the Sun's elevation (as computed by `pyephem <http://rhodesmill.org/pyephem/>`_) and shifting the color of the pixel towards blue accordingly. Twilight starts when the Sun is 18° below the horizon (`astronomical twilight <https://en.wikipedia.org/wiki/Twilight#Astronomical_twilight>`_) and ends when it has risen to 0°.
+Night shading for each pixel is done by looking at the Sun's elevation and shifting the color of the pixel towards blue accordingly. Twilight starts when the Sun is 18° below the horizon and ends when it has risen to 0°.
 
 Satellite locations are derived from `TLE <https://en.wikipedia.org/wiki/Two-line_element_set>`_ data downloaded from `CelesTrak <https://celestrak.com/>`_. The data is fed into pyephem where the current position of the satellite is computed using `SGP4 <https://en.wikipedia.org/wiki/Simplified_perturbations_models>`_. Most of the data you see in the info panels is provided by pyephem, but the apsides' locations as well as the satellite footprint outline are computed by TermTrack itself.
 
